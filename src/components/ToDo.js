@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import Logo from "../assets/logo.png";
+import ReactLogo from "../assets/react.png";
+import CypressLogo from "../assets/cypress.png";
 import ToDoItem from "./ToDoItem";
 
 const ToDo = () => {
@@ -15,7 +16,7 @@ const ToDo = () => {
       alert("Please enter a todo!");
       return;
     }
-    const newId = Math.max.apply(null, list.map((t) => t.id)) + 1;
+    const newId = Math.max(...list.map((t) => t.id)) + 1;
     const newToDo = { id: newId, text: toDo };
     setList([...list, newToDo]);
     setToDo("");
@@ -37,9 +38,10 @@ const ToDo = () => {
 
   return (
     <div className="ToDo">
-      <img className="Logo" src={Logo} alt="React logo" />
+      <img className="Logo" src={ReactLogo} alt="logo" />
+      <img className="Logo" src={CypressLogo} alt="logo" />
       <h1 className="ToDo-Header">React To Do</h1>
-      <h3 className="ToDo-Subheader">now with Hooks!</h3>
+      <h3 className="ToDo-Subheader">tested with Jest + Cypress</h3>
       <div className="ToDo-Container">
         <div className="ToDo-Content">
           {list.map((item) => {
