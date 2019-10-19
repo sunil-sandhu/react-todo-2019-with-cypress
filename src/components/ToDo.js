@@ -41,7 +41,7 @@ const ToDo = () => {
       <img className="Logo" src={ReactLogo} alt="logo" />
       <img className="Logo" src={CypressLogo} alt="logo" />
       <h1 className="ToDo-Header">React To Do</h1>
-      <h3 className="ToDo-Subheader">tested with Jest + Cypress</h3>
+      <h3 className="ToDo-Subheader">tested with Cypress</h3>
       <div className="ToDo-Container">
         <div className="ToDo-Content">
           {list.map((item) => {
